@@ -64,7 +64,7 @@ public class RegisterModel implements IRegisterModel{
                 // 解析
                 GetVerificationCodeResponse getVerificationCodeResponse = JSON.parseObject(result, GetVerificationCodeResponse.class);
                 // 判断是否成功
-                if (getVerificationCodeResponse.getCode() == NOHTTP_WHAT_GET_VERIFICATION_CODE) { // 成功
+                if (getVerificationCodeResponse.getCode() == 0) { // 成功
                     callBack.onSuccess(getVerificationCodeResponse.getInfo());
                 } else { // 失败
                     Exception e = new Exception(getVerificationCodeResponse.getInfo());
@@ -117,7 +117,7 @@ public class RegisterModel implements IRegisterModel{
                 // 解析
                 RegisterResponse registerResponse = JSON.parseObject(result, RegisterResponse.class);
                 // 判断是否成功
-                if (registerResponse.getCode() == NOHTTP_WHAT_REGISTER) { // 成功
+                if (registerResponse.getCode() == 0) { // 成功
                     callBack.onSuccess(registerResponse.getInfo());
                 } else { // 失败
                     Exception e = new Exception(registerResponse.getInfo());

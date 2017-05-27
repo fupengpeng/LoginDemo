@@ -79,8 +79,6 @@ public class RegisterActivity extends BaseActivity implements IRegisterView {
      */
     @BindView(R.id.tv_title_text)
     TextView tvTitleText;
-    @BindView(R.id.tv_time)
-    TextView tvTime;
 
     /**
      * 主导器
@@ -94,12 +92,21 @@ public class RegisterActivity extends BaseActivity implements IRegisterView {
     public static final String REGEX_EMAIL = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
 
 
-    private int recLen = 11;
+    /**
+     * 倒计时60秒
+     */
+    private int recLen = 60;
+    /**
+     * 计时器
+     */
     Timer timer = new Timer();
+    /**
+     * 倒计时任务
+     */
     TimerTask task = new TimerTask() {
         @Override
         public void run() {
-            runOnUiThread(new Runnable() {      // UI thread
+            runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     recLen--;
@@ -114,7 +121,6 @@ public class RegisterActivity extends BaseActivity implements IRegisterView {
             });
         }
     };
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,7 +137,6 @@ public class RegisterActivity extends BaseActivity implements IRegisterView {
         ivTitleRight.setImageResource(R.drawable.ic_left_return_black_24dp);
 
     }
-
 
     /**
      * 输入框的输入监听
@@ -179,9 +184,7 @@ public class RegisterActivity extends BaseActivity implements IRegisterView {
                 if (TextUtils.isEmpty(cetRegisterPhoneNumber.getText().toString().trim())) {
                     ToastUtils.showLong(RegisterActivity.this, "请输入手机号码");
                 } else if (cetRegisterPhoneNumber.getText().toString().trim().matches(telRegex)) {
-                    // TODO: 2017/5/26 0026 手机号码符合规定，进行验证码的获取
                     String mobilePhoneNumber = cetRegisterPhoneNumber.getText().toString().trim();
-                    Log.e(TAG, "onViewClicked: " + "00005");
                     registerPresenter.getVerificationCode(mobilePhoneNumber);
                     timer.schedule(task, 0, 1000);       // timeTask
                 } else {

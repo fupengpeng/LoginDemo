@@ -57,7 +57,6 @@ public class RegisterPresenter extends BaseActivityPresenter implements IRegiste
             public void onSuccess(String userId) { // 获取验证码成功
                 // 关闭等待对话框
                 closeWaitDialog();
-                Log.e(TAG, "onSuccess: "+"-------0010" );
                 // 设置获取验证码成功
                 registerView.setGetVerificationCodeSuccess();
             }
@@ -67,7 +66,6 @@ public class RegisterPresenter extends BaseActivityPresenter implements IRegiste
                 // 关闭等待对话框
                 closeWaitDialog();
                 // 显示错误信息
-                Log.e(TAG, "onSuccess: "+"-------0011" );
                 InfoUtils.showInfo(activity, e.getMessage());
             }
         });
@@ -80,14 +78,12 @@ public class RegisterPresenter extends BaseActivityPresenter implements IRegiste
      */
     @Override
     public void register(String tel, String password) {
-        Log.e(TAG, "onSuccess: "+"-------0012" );
         // 显示等待对话框
         showWaitDialog(Consts.WaitDialogMessage.LOGIN);
         // 注册
         registerModel.register(tel, password, new ObjectCallBack<String>() {
             @Override
             public void onSuccess(String userId) { // 注册成功
-                Log.e(TAG, "onSuccess: "+"-------0013" );
                 // 关闭等待对话框
                 closeWaitDialog();
                 // 设置注册成功
@@ -103,7 +99,6 @@ public class RegisterPresenter extends BaseActivityPresenter implements IRegiste
                 // 关闭等待对话框
                 closeWaitDialog();
                 // 显示错误信息
-                Log.e(TAG, "onSuccess: "+"-------0014" );
                 InfoUtils.showInfo(activity, e.getMessage());
             }
         });
