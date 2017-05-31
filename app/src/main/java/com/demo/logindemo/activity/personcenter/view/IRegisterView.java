@@ -1,4 +1,4 @@
-package com.demo.logindemo.activity.register.view;
+package com.demo.logindemo.activity.personcenter.view;
 
 import com.demo.logindemo.activity.IBaseView;
 

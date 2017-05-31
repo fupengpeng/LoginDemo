@@ -31,7 +31,7 @@
         <activity
             android:name=".activity.other.impl.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize" />
-        <activity android:name=".activity.register.impl.RegisterActivity"></activity>
+        <activity android:name=".activity.personcenter.impl.RegisterActivity"></activity>
     </application>
 
 </manifest>

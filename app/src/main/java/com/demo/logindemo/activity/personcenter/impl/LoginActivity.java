@@ -1,6 +1,5 @@
 package com.demo.logindemo.activity.personcenter.impl;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -11,7 +10,6 @@ import android.widget.TextView;
 import com.demo.logindemo.R;
 import com.demo.logindemo.activity.BaseActivity;
 import com.demo.logindemo.activity.personcenter.view.ILoginView;
-import com.demo.logindemo.activity.register.impl.RegisterActivity;
 import com.demo.logindemo.customerview.ClearEditText;
 import com.demo.logindemo.presenter.personcenter.factory.LoginActivityPresenterFactory;
 import com.demo.logindemo.presenter.personcenter.interf.ILoginActivityPresenter;

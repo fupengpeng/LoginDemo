@@ -1,4 +1,4 @@
-package com.demo.logindemo.presenter.register.interf;
+package com.demo.logindemo.presenter.personcenter.interf;
 
 /**
  * Created by fupengpeng on 2017/5/26 0026.

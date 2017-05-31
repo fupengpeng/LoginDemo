@@ -1,9 +1,8 @@
-package com.demo.logindemo.activity.register.impl;
+package com.demo.logindemo.activity.personcenter.impl;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -12,11 +11,10 @@ import android.widget.TextView;
 
 import com.demo.logindemo.R;
 import com.demo.logindemo.activity.BaseActivity;
-import com.demo.logindemo.activity.personcenter.impl.LoginActivity;
-import com.demo.logindemo.activity.register.view.IRegisterView;
+import com.demo.logindemo.activity.personcenter.view.IRegisterView;
 import com.demo.logindemo.customerview.ClearEditText;
-import com.demo.logindemo.presenter.register.factory.RegisterPresenterFactory;
-import com.demo.logindemo.presenter.register.interf.IRegisterPresenter;
+import com.demo.logindemo.presenter.personcenter.factory.RegisterPresenterFactory;
+import com.demo.logindemo.presenter.personcenter.interf.IRegisterPresenter;
 import com.demo.logindemo.util.ToastUtils;
 
 import java.util.Timer;

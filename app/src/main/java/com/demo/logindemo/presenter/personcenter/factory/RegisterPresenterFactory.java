@@ -1,8 +1,8 @@
-package com.demo.logindemo.presenter.register.factory;
+package com.demo.logindemo.presenter.personcenter.factory;
 
-import com.demo.logindemo.activity.register.view.IRegisterView;
-import com.demo.logindemo.presenter.register.impl.RegisterPresenter;
-import com.demo.logindemo.presenter.register.interf.IRegisterPresenter;
+import com.demo.logindemo.activity.personcenter.view.IRegisterView;
+import com.demo.logindemo.presenter.personcenter.impl.RegisterPresenter;
+import com.demo.logindemo.presenter.personcenter.interf.IRegisterPresenter;
 
 /**
  * Created by fupengpeng on 2017/5/26 0026.

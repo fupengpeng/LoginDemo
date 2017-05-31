@@ -1,16 +1,16 @@
-package com.demo.logindemo.presenter.register.impl;
+package com.demo.logindemo.presenter.personcenter.impl;
 
 
 import android.util.Log;
 
 import com.demo.logindemo.activity.personcenter.impl.LoginActivity;
-import com.demo.logindemo.activity.register.view.IRegisterView;
+import com.demo.logindemo.activity.personcenter.view.IRegisterView;
 import com.demo.logindemo.common.Consts;
 import com.demo.logindemo.common.ObjectCallBack;
 import com.demo.logindemo.model.register.factory.RegisterModelFactory;
 import com.demo.logindemo.model.register.interf.IRegisterModel;
 import com.demo.logindemo.presenter.BaseActivityPresenter;
-import com.demo.logindemo.presenter.register.interf.IRegisterPresenter;
+import com.demo.logindemo.presenter.personcenter.interf.IRegisterPresenter;
 import com.demo.logindemo.util.InfoUtils;
 
 /**
@@ -88,6 +88,7 @@ public class RegisterPresenter extends BaseActivityPresenter implements IRegiste
                 closeWaitDialog();
                 // 设置注册成功
                 registerView.setRegisterSuccess();
+                Log.e(TAG, "onSuccess: "+"--------------------" );
                 // 返回登录界面
                 startActivity(LoginActivity.class);
                 // 关闭注册界面
