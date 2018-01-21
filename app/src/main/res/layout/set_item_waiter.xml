@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+        <TextView
+            android:gravity="center"
+            android:text="标题栏"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <!--项目及可预约员工设置-->
+    <ListView
+        android:id="@+id/lv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--listview子条目布局-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <!--项目信息-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <!--项目图片-->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+            <!--项目名等信息-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:gravity="center|left"
+                    android:text="洗剪吹"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp" />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+                    <TextView
+                        android:gravity="center"
+                        android:text="以下"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:gravity="center"
+                        android:text="位员工可预约"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--是否可预约-->
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--员工信息-->
+        <LinearLayout
+            android:layout_marginLeft="80dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--添加按钮-->
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="100dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp" />
+                <TextView
+                    android:gravity="center"
+                    android:text="添加"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp" />
+            </LinearLayout>
+            <!--横向listview,展示可预约员工信息-->
+            <ListView
+                android:id="@+id/lv_waiter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--员工listview子条目布局-->
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <TextView
+            android:gravity="center"
+            android:text="添加"
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+    </LinearLayout>
+</LinearLayout>
